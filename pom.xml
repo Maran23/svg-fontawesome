@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>tools.maran</groupId>
+    <artifactId>svg-fontawesome</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>SVG Font Awesome</name>
+    <description>Collection of all Font Awesome SVG paths.</description>
+    <url>https://github.com/Maran23/svg-fontawesome</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>25</maven.compiler.release>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>tools.maran</groupId>
+            <artifactId>svg</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.4.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.15.0</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.12.0</version>
+                <configuration>
+                    <failOnError>false</failOnError>
+                    <windowtitle>SVG Font Awesome API</windowtitle>
+                    <docfilessubdirs>true</docfilessubdirs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.8</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.10.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <autoPublish>false</autoPublish>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <developers>
+        <developer>
+            <name>Marius Hanl</name>
+            <url>https://maran.tools</url>
+            <email>info@maran.tools</email>
+            <organization>Maran Tools</organization>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://github.com/Maran23/svg-fontawesome/blob/master/LICENSE</url>
+        </license>
+        <license>
+            <name>CC BY 4.0 (Font Awesome Free Icons)</name>
+            <url>https://creativecommons.org/licenses/by/4.0/</url>
+            <comments>
+                Applies to Font Awesome Free SVG icon data (SVG path) included in this project.
+                Copyright (C) Font Awesome (https://fontawesome.com).
+            </comments>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:github.com/Maran23/svg-fontawesome.git</connection>
+        <developerConnection>scm:git:ssh://github.com/Maran23/svg-fontawesome.git</developerConnection>
+        <url>https://github.com/Maran23/svg-fontawesome</url>
+    </scm>
+
+</project>
