@@ -2,6 +2,8 @@
 
 A collection of all [Font Awesome](https://fontawesome.com) Free SVG icon paths as Java enum constants – ready to be used in any Java program.
 
+![FontAwesome](https://github.com/Maran23/svgnode/blob/demo/demo/library_fontawesome.webp)
+
 ## Features
 
 - 🎨 All Font Awesome Free icons as Java enums — Solid, Regular, and Brands
