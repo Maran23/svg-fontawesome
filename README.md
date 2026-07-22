@@ -8,15 +8,15 @@ A collection of all [Font Awesome](https://fontawesome.com) Free SVG icon paths 
 
 - 🎨 All Font Awesome Free icons as Java enums — Solid, Regular, and Brands
 - 🔗 No dependencies
-- 📐 Designed as a companion library for [SvgNode](https://github.com/Maran23/svgnode) for use in JavaFX applications – but works in any Java context
+- 📐 Designed as a companion library for [SvgNode](https://github.com/Maran23/svgnode) for use in JavaFX applications - but works in any Java context
 
-## Requirements
+## Installation
+
+### Requirements
 
 | Dependency | Version |
 |------------|---------|
 | Java       | 25+     |
-
-## Installation
 
 ### Maven
 
@@ -72,7 +72,7 @@ SvgNode node = new SvgNode(FASolid.HOME.path(), 32);
 <?import tools.maran.svgnode.SvgNode?>
 <?import tools.maran.svg.fontawesome.FASolid?>
 
-<SvgNode size="32" svgColor="RED">
+<SvgNode size="32" color="RED">
     <path>
         <FASolid fx:constant="HOME"/>
     </path>
